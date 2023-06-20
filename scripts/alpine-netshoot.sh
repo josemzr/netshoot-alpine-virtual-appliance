@@ -63,6 +63,7 @@ apk add --no-cache \
     util-linux \
     vim \
     git \
+    perl-utils \
     websocat \
     perl-crypt-ssleay \
     perl-net-ssleay
