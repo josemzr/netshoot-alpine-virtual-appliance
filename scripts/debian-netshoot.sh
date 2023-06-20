@@ -60,6 +60,7 @@ apk add --no-cache \
     tcpdump \
     tcptraceroute \
     tshark \
+    tmux \
     util-linux \
     vim \
     git \
