@@ -31,6 +31,9 @@ iface lo inet loopback
 auto eth0
 iface eth0 inet dhcp
 __CUSTOMIZE_ALPINE__
+
+    echo -e "Restarting Network ..." > /dev/console
+    rc-service networking restart
 }
 
 configureStaticNetwork() {
@@ -46,6 +49,8 @@ address ${IP_ADDRESS}/${NETPREFIX}
 gateway ${GATEWAY}
 __CUSTOMIZE_ALPINE__
 
+    echo -e "Restarting Network ..." > /dev/console
+    rc-service networking restart
 }
 
 configureDNS(){
@@ -63,10 +68,6 @@ configureHostname() {
     rc-service hostname restart
 }
 
-restartNetwork() {
-    echo -e "Restarting Network ..." > /dev/console
-    rc-service networking restart
-}
 
 configureRootPassword() {
     echo -e "Configuring root password ..." > /dev/console
@@ -118,7 +119,6 @@ if [ -z "${IP_ADDRESS}" ] || [ -z "${GATEWAY}" ] || [ "${IP_ADDRESS}" == "null" 
 
     configureDHCP
     configureHostname
-    restartNetwork
     configureRootPassword
     addCertStore
     addSshKey
@@ -128,7 +128,6 @@ if [ -z "${IP_ADDRESS}" ] || [ -z "${GATEWAY}" ] || [ "${IP_ADDRESS}" == "null" 
 
     configureStaticNetwork
     configureHostname
-    restartNetwork
     configureDNS
     configureRootPassword
     addCertStore
