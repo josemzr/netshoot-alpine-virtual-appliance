@@ -55,7 +55,6 @@ apk add --no-cache \
     socat \
     speedtest-cli \
     openssh \
-    oh-my-zsh \
     strace \
     tcpdump \
     tcptraceroute \
@@ -64,9 +63,7 @@ apk add --no-cache \
     util-linux \
     vim \
     git \
-    zsh \
     websocat \
-    swaks \
     perl-crypt-ssleay \
     perl-net-ssleay
     
