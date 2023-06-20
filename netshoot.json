@@ -94,12 +94,7 @@
       "destination": "/etc/local.d/resize.start",
       "source": "files/alpine-resizefs.sh",
       "type": "file"
-    },
-    {
-      "destination": "/usr/local/bin/tty-share",
-      "source": "files/tty-share",
-      "type": "file"
-    },
+    }
     {
       "type": "shell",
       "scripts": [
