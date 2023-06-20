@@ -8,7 +8,7 @@
 
 echo '> Installing Network utilities...'
 
-apk add --no-cache -y \
+apk add --no-cache \
   curl \
   rsync \
   busybox-extras \
