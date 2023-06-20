@@ -21,7 +21,7 @@ apk add --no-cache \
     busybox-extras \
     conntrack-tools \
     curl \
-    cloud-utils-growpart \ 
+    cloud-utils-growpart \
     dhcping \
     drill \
     e2fsprogs-extra \
