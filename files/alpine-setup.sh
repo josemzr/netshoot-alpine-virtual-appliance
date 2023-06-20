@@ -14,7 +14,7 @@
 
 configureDHCP() {
     echo -e "Configuring network using DHCP..." > /dev/console
-    cat > /etc/network/interfaces << __CUSTOMIZE_DEBIAN__
+    cat > /etc/network/interfaces << __CUSTOMIZE_ALPINE__
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 source /etc/network/interfaces.d/*
@@ -24,12 +24,12 @@ iface lo inet loopback
 # The primary network interface
 auto eth0
 iface eth0 inet dhcp
-__CUSTOMIZE_DEBIAN__
+__CUSTOMIZE_ALPINE__
 }
 
 configureStaticNetwork() {
     echo -e "Configuring Static IP Address ..." > /dev/console
-    cat > /etc/network/interfaces << __CUSTOMIZE_DEBIAN__
+    cat > /etc/network/interfaces << __CUSTOMIZE_ALPINE__
 # This file describes the network interfaces available on your system
 # and how to activate them. For more information, see interfaces(5).
 source /etc/network/interfaces.d/*
@@ -41,7 +41,7 @@ auto eth0
 iface eth0 inet static
     address ${IP_ADDRESS}/${NETPREFIX}
     gateway ${GATEWAY}
-__CUSTOMIZE_DEBIAN__
+__CUSTOMIZE_ALPINE__
 
 }
 
