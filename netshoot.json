@@ -81,7 +81,7 @@
       "type": "file"
     },
     {
-      "destination": "/opt/alpine-setup.sh",
+      "destination": "/etc/local.d/customization.start",
       "source": "files/alpine-setup.sh",
       "type": "file"
     },
