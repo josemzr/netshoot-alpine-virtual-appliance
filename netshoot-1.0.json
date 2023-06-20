@@ -4,11 +4,11 @@
 	"description": "Netshoot vSphere image",
 	"vm_name": "netshoot",
 	"hostname": "netshoot",
-	"numvcpus": "2",
-	"ramsize": "2048",
-	"iso_checksum": "d490a35d36030592839f24e468a5b818c919943967012037d6ab3d65d030ef7f",
+	"numvcpus": "1",
+	"ramsize": "512",
+	"iso_checksum": "ff0d9cf3acf52fa08aa90984e96f9504a60ed6b763d910152443b29eb689fd47",
 	"iso_checksum_type": "sha256",
-	"iso_url": "https://cdimage.debian.org/cdimage/archive/11.4.0/amd64/iso-cd/debian-11.4.0-amd64-netinst.iso",
+	"iso_url": "https://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-virt-3.15.6-x86_64.iso",
 	"guest_username": "root",
 	"guest_password": "VMware1!"
 }
