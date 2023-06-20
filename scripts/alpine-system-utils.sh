@@ -7,10 +7,10 @@
 
 echo '> Installing System Utilities...'
 
-apt-get install -y \
+apk add --no-cache \
   jq \
-  grc \
   git \
+  vim \
   tmux \
   htop \
   unzip
