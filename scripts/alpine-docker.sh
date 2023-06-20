@@ -1,10 +1,9 @@
-#!/bin/bash -eux
-
 ##
 ## Alpine Docker
 ## Install Docker
 ##
 
+set -xeu 
 echo '> Installing Docker...'
 
 # Install Docker from the Community repo
