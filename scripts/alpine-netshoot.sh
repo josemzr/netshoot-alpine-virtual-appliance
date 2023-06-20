@@ -1,10 +1,9 @@
-#!/bin/bash -eux
-
 ##
 ## Alpine
 ## Setup Network Troubleshooting Packages
 ##
 
+set -xeu 
 echo '> Setup Netshoot Packages...'
 
 echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories \
