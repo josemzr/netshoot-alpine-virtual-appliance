@@ -25,13 +25,9 @@ SSH_KEY=$(/opt/getOvfProperty.py "guestinfo.sshkey")
 configureDHCP() {
     echo -e "Configuring network using DHCP..." > /dev/console
     cat > /etc/network/interfaces << __CUSTOMIZE_ALPINE__
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
-source /etc/network/interfaces.d/*
-# The loopback network interface
 auto lo
 iface lo inet loopback
-# The primary network interface
+
 auto eth0
 iface eth0 inet dhcp
 __CUSTOMIZE_ALPINE__
@@ -40,17 +36,14 @@ __CUSTOMIZE_ALPINE__
 configureStaticNetwork() {
     echo -e "Configuring Static IP Address ..." > /dev/console
     cat > /etc/network/interfaces << __CUSTOMIZE_ALPINE__
-# This file describes the network interfaces available on your system
-# and how to activate them. For more information, see interfaces(5).
-source /etc/network/interfaces.d/*
-# The loopback network interface
+
 auto lo
 iface lo inet loopback
-# The primary network interface
+
 auto eth0
 iface eth0 inet static
-    address ${IP_ADDRESS}/${NETPREFIX}
-    gateway ${GATEWAY}
+address ${IP_ADDRESS}/${NETPREFIX}
+gateway ${GATEWAY}
 __CUSTOMIZE_ALPINE__
 
 }
@@ -72,7 +65,7 @@ configureHostname() {
 
 restartNetwork() {
     echo -e "Restarting Network ..." > /dev/console
-    systemctl restart networking
+    rc-service networking restart
 }
 
 configureRootPassword() {
