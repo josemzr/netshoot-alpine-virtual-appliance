@@ -1,10 +1,9 @@
-#!/bin/bash -eux
-
 ##
 ## Alpine
 ## Setup ResizeFS script
 ##
 
+set -xeu
 echo '> Setup ResizeFS boot script...'
 
 chmod +x /opt/alpine-resizefs.sh
