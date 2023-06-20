@@ -1,4 +1,4 @@
-# Netshoot Virtual Appliance
+# Netshoot Alpine Virtual Appliance
 
 
 This is a template to have the [Netshoot project](https://github.com/nicolaka/netshoot) by Nicolaka in an OVA format. It is very useful for those situations when you require a light and fast to deploy VM to troubleshoot a faulty network VM or container environment, but don't want to install a full VM.
