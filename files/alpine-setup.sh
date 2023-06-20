@@ -62,8 +62,8 @@ configureHostname() {
     echo -e "Configuring hostname ..." > /dev/console
     setup-hostname -n "${HOSTNAME}"
 	cat > /etc/hosts <<-EOF
-	    127.0.0.1    "${HOSTNAME}" localhost.localdomain localhost
-		::1          localhost localhost.localdomain
+	127.0.0.1    "${HOSTNAME}" localhost.localdomain localhost
+	::1          localhost localhost.localdomain
 	EOF
     rc-service hostname restart
 }
