@@ -1,24 +1,17 @@
 #!/bin/bash -eux
 
 ##
-## Debian Network
+## Alpine Linux
 ## Install Network utilities
 ##
 
 
 echo '> Installing Network utilities...'
 
-apt-get install -y \
-  ntp \
+apk add --no-cache -y \
   curl \
-  wget \
   rsync \
-  telnet \
-  netcat \
-  quagga \
-  dnsmasq \
-  mtr-tiny \
-  speedometer \
-  bridge-utils
+  busybox-extras \
+  mtr
 
 echo '> Done'
