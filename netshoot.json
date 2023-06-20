@@ -105,7 +105,6 @@
       "scripts": [
         "scripts/alpine-update.sh",
         "scripts/alpine-vmware.sh",
-        "scripts/alpine-docker.sh",
         "scripts/alpine-system.sh",
         "scripts/alpine-settings.sh",
         "scripts/alpine-netshoot.sh",
