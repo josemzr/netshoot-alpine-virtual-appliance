@@ -3,9 +3,9 @@
 
 This is a template to have the [Netshoot project](https://github.com/nicolaka/netshoot) by Nicolaka in an OVA format. It is very useful for those situations when you require a light and fast to deploy VM to troubleshoot a faulty network VM or container environment, but don't want to install a full VM.
 
-The OVA is based around Debian GNU/Linux Bullseye and can be built using [Packer](https://www.packer.io). The Packer template is based around the Debian template developed by [Timo Sugliani](https://github.com/tsugliani/packer-vsphere-debian-appliances). 
+The OVA is based around Alpine Linux and can be built using [Packer](https://www.packer.io). The Packer template is based around the Alpine template developed by [Timo Sugliani](https://github.com/tsugliani/packer-alpine). 
 
-The following Packer templates will build an OVA using a VMware vSphere ESXi host (although it is easily modifiable to build from VMware Workstation or Fusion) from a Debian Bullseye minimal image. After the creation, the VM will be customizable using OVF parameters, so network and root password will be assignable during deployment. If no network is configured during deployment, it will use DHCP.
+The following Packer templates will build an OVA using a VMware vSphere ESXi host (although it is easily modifiable to build from VMware Workstation or Fusion) from an Alpine minimal image. After the creation, the VM will be customizable using OVF parameters, so network and root password will be assignable during deployment. If no network is configured during deployment, it will use DHCP.
 
 
 ---
@@ -113,4 +113,4 @@ sshpass
 **Acknowledgements**
 
 
-This project is possible because of the great work done in the [packer-vsphere-debian-appliances](https://github.com/tsugliani/packer-vsphere-debian-appliances) project and the amazing [Netshoot](https://github.com/nicolaka/netshoot) by Nicolaka. Also, Robert Guske contributed to the previous project, Netshoot-OVA.
+This project is possible because of the great work done in the [packer-alpine](https://github.com/tsugliani/packer-alpine) project and the amazing [Netshoot](https://github.com/nicolaka/netshoot) by Nicolaka. Also, Robert Guske contributed to the previous project, Netshoot-OVA.
