@@ -13,6 +13,7 @@ echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositor
 apk update 
 apk upgrade 
 apk add --no-cache \
+    python3 \
     apache2-utils \
     bash \
     bind-tools \
