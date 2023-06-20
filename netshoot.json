@@ -10,6 +10,7 @@
         "ERASE_DISKS='/dev/sda' setup-alpine -f $PWD/answers<enter><wait5>",
         "{{user `guest_password`}}<enter><wait>",
         "{{user `guest_password`}}<enter><wait10>",
+        "no<enter>",
         "mount /dev/sda3 /mnt<enter>",
         "echo 'PermitRootLogin yes' >> /mnt/etc/ssh/sshd_config<enter>",
         "umount /mnt ; reboot<enter>"
