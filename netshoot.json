@@ -106,7 +106,6 @@
         "scripts/alpine-netshoot.sh",
         "scripts/alpine-docker.sh",
         "scripts/alpine-network.sh",
-        "scripts/alpine-resizefs.sh",
         "scripts/alpine-cleanup.sh"
       ]
     }
