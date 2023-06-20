@@ -56,6 +56,7 @@ apk add --no-cache \
     speedtest-cli \
     openssh \
     strace \
+    stunnel \
     tcpdump \
     tcptraceroute \
     tshark \
@@ -74,17 +75,19 @@ chmod +x kubectl
 mv kubectl /usr/local/bin
 
 # Install Termshark
-wget https://github.com/gcla/termshark/releases/download/v2.2.0/termshark_2.2.0_linux_x64.tar.gz
-tar -xzvf termshark_2.2.0_linux_x64.tar.gz --strip-components=1
-rm -rf termshark_2.2.0_linux_x64.tar.gz
+wget https://github.com/gcla/termshark/releases/download/v2.4.0/termshark_2.4.0_linux_x64.tar.gz
+tar -xzvf termshark_2.4.0_linux_x64.tar.gz --strip-components=1
+rm -rf termshark_2.4.0_linux_x64.tar.gz
 chmod +x termshark
 mv termshark /usr/local/bin
 
 # Install Carvel tools
 curl -L https://carvel.dev/install.sh | bash
 
-# Make the tty-share executable (previously copied from the files folder)
-chmod +x /usr/local/bin/tty-share
+# Download TTY-Proxy
+wget https://github.com/elisescu/tty-share/releases/download/v2.4.0/tty-share_linux-amd64
+chmod +x tty-share_linux-amd64
+mv tty-share_linux-amd64 /usr/local/bin/tty-share
 
 echo '> Done'
 
