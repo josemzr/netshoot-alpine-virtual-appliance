@@ -2,7 +2,7 @@
 
 set -xeu
 
-FILE_CUSTOMIZATION="/etc/customization.state"
+FILE_CUSTOMIZATION="/etc/ran_customization"
 
 #
 # If customization was already launch, exit right away
