@@ -1,15 +1,24 @@
-#!/bin/bash
-
 # Bootstrap script
 
-    HOSTNAME="netshoot"
-    IP_ADDRESS=$(/opt/getOvfProperty.py "guestinfo.ipaddress" | cut -f1 -d"/")
-    NETPREFIX=$(/opt/getOvfProperty.py "guestinfo.netprefix" | awk -F ' ' '{print $1}')
-    GATEWAY=$(/opt/getOvfProperty.py "guestinfo.gateway" | cut -f1 -d"/")
-    DNS_SERVER=$(/opt/getOvfProperty.py "guestinfo.dns")
-    ROOT_PASSWORD=$(/opt/getOvfProperty.py "guestinfo.password")
-    ADD_TLS_CERTIFICATE=$(/opt/getOvfProperty.py "guestinfo.add_tls_certificate")
-    SSH_KEY=$(/opt/getOvfProperty.py "guestinfo.sshkey")
+
+FILE_CUSTOMIZATION="/etc/customization.state"
+
+#
+# If customization was already launch, exit right away
+#
+if [ -s $FILE_CUSTOMIZATION ]
+then
+    exit 0
+fi
+
+HOSTNAME="netshoot"
+IP_ADDRESS=$(/opt/getOvfProperty.py "guestinfo.ipaddress" | cut -f1 -d"/")
+NETPREFIX=$(/opt/getOvfProperty.py "guestinfo.netprefix" | awk -F ' ' '{print $1}')
+GATEWAY=$(/opt/getOvfProperty.py "guestinfo.gateway" | cut -f1 -d"/")
+DNS_SERVER=$(/opt/getOvfProperty.py "guestinfo.dns")
+ROOT_PASSWORD=$(/opt/getOvfProperty.py "guestinfo.password")
+ADD_TLS_CERTIFICATE=$(/opt/getOvfProperty.py "guestinfo.add_tls_certificate")
+SSH_KEY=$(/opt/getOvfProperty.py "guestinfo.sshkey")
 
 
 configureDHCP() {
