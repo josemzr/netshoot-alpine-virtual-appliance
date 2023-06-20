@@ -91,7 +91,7 @@
       "type": "file"
     },
     {
-      "destination": "/opt/alpine-resizefs.sh",
+      "destination": "/etc/local.d/resize.start",
       "source": "files/alpine-resizefs.sh",
       "type": "file"
     },
