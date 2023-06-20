@@ -55,14 +55,14 @@ __CUSTOMIZE_ALPINE__
 
 configureDNS(){
 echo -e "Configuring DNS ..." > /dev/console
-setup-dns -n "${DNS_SERVER}"
+setup-dns -d netshoot.com -n "${DNS_SERVER}"
 }
 
 configureHostname() {
     echo -e "Configuring hostname ..." > /dev/console
     setup-hostname -n "${HOSTNAME}"
 	cat > /etc/hosts <<-EOF
-	127.0.0.1    "${HOSTNAME}" localhost.localdomain localhost
+	127.0.0.1    ${HOSTNAME}.netshoot.com localhost.localdomain localhost
 	::1          localhost localhost.localdomain
 	EOF
     rc-service hostname restart
