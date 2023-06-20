@@ -3,9 +3,6 @@
 ## Resize disk 
 ##
 
-set -xeu 
-echo '> Resizing disk...'
-
 echo 1 > /sys/class/block/sda/device/rescan
 sleep 2
 GROWPART_OUT=`growpart /dev/sda 3`
