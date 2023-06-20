@@ -1,11 +1,11 @@
 #!/bin/bash -eux
 
 ##
-## Debian 
+## Alpine
 ## Setup ResizeFS script
 ##
 
 echo '> Setup ResizeFS boot script...'
 
-chmod +x /opt/debian-resizefs.sh
-echo "@reboot root  /opt/debian-resizefs.sh" >> /etc/crontab
+chmod +x /opt/alpine-resizefs.sh
+echo "@reboot root  /opt/alpine-resizefs.sh" >> /var/spool/cron/crontabs
