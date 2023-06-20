@@ -1,11 +1,9 @@
-#!/bin/bash -eux
-
 ##
 ## Alpine Linux
 ## Install Network utilities
 ##
 
-
+set -xeu 
 echo '> Installing Network utilities...'
 
 apk add --no-cache \
