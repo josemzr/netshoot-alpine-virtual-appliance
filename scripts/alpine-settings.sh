@@ -1,10 +1,9 @@
-#!/bin/bash -eux
-
 ##
 ## Alpine Settings
 ## Misc configuration
 ##
 
+set -xeu 
 echo '> Alpine Settings...'
 
 echo '> SSH directory'
