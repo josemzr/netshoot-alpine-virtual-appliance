@@ -46,22 +46,18 @@ __CUSTOMIZE_DEBIAN__
 }
 
 configureDNS(){
-# Treating elements in guestinfo.dns as an array to add them to /etc/resolv.conf
-# Note this only runs if static IP address is being used
 echo -e "Configuring DNS ..." > /dev/console
-# Clear up previous /etc/resolv.conf
-rm -rf /etc/resolv.conf
-IFS=', ' read -r -a array <<< "${DNS_SERVER}"
-for element in "${array[@]}"
-do
-    echo "nameserver $element" >> /etc/resolv.conf
-done
+setup-dns -n "${DNS_SERVER}"
 }
 
 configureHostname() {
     echo -e "Configuring hostname ..." > /dev/console
-    [ -z "${HOSTNAME}" ] && HOSTNAME=debian hostnamectl set-hostname debian  || hostnamectl set-hostname ${HOSTNAME}
-    echo "${IP_ADDRESS} ${HOSTNAME}" >> /etc/hosts
+    setup-hostname -n "${HOSTNAME}"
+	cat > /etc/hosts <<-EOF
+	    127.0.0.1    "${HOSTNAME}" localhost.localdomain localhost
+		::1          localhost localhost.localdomain
+	EOF
+    rc-service hostname restart
 }
 
 restartNetwork() {
