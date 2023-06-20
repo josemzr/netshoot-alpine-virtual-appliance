@@ -6,9 +6,9 @@
 	"hostname": "netshoot",
 	"numvcpus": "1",
 	"ramsize": "512",
-	"iso_checksum": "ff0d9cf3acf52fa08aa90984e96f9504a60ed6b763d910152443b29eb689fd47",
+	"iso_checksum": "6bc7ff54f5249bfb67082e1cf261aaa6f307d05f64089d3909e18b2b0481467f",
 	"iso_checksum_type": "sha256",
-	"iso_url": "https://dl-cdn.alpinelinux.org/alpine/v3.15/releases/x86_64/alpine-virt-3.15.6-x86_64.iso",
+	"iso_url": "https://dl-cdn.alpinelinux.org/alpine/v3.18/releases/x86_64/alpine-virt-3.18.2-x86_64.iso",
 	"guest_username": "root",
 	"guest_password": "VMware1!"
 }
