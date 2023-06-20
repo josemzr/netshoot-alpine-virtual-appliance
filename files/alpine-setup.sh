@@ -1,5 +1,6 @@
 # Bootstrap script
 
+set -xeu
 
 FILE_CUSTOMIZATION="/etc/customization.state"
 
