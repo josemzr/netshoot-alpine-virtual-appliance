@@ -83,9 +83,6 @@ rm -rf termshark_2.4.0_linux_x64.tar.gz
 chmod +x termshark
 mv termshark /usr/local/bin
 
-# Install Carvel tools
-curl -L https://carvel.dev/install.sh | bash
-
 # Download TTY-Proxy
 wget https://github.com/elisescu/tty-share/releases/download/v2.4.0/tty-share_linux-amd64
 chmod +x tty-share_linux-amd64
